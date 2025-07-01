@@ -1,62 +1,64 @@
-# Dokumentacja projektu - Odtwarzacz Audio
+# Project Documentation – Audio Player
 
-## 1. Wstęp
+## 1. Introduction
 
-### 1.1 Cel projektu
+### 1.1 Project Goal
 
-Celem projektu jest stworzenie aplikacji do odtwarzania plików w formatach MP3, Wav oraz FLAC. Aplikacja umożliwia zarządzanie biblioteką plików, odtwarzanie plików audio, kontrolowanie poziomu głośności, pauzowanie, przewijanie oraz ustawienie różnych opcji odtwarzania, takich jak zapętlanie czy losowe odtwarzanie. Projekt wykorzystuje framework Qt w wersji 5 lub 6.
+The goal of the project is to create an application for playing files in MP3, WAV, and FLAC formats. The application allows managing a file library, playing audio files, controlling volume, pausing, seeking, and setting various playback options such as looping or shuffle. The project uses the Qt framework version 5 or 6.
 
-### 1.2 Zakres projektu
+### 1.2 Project Scope
 
-Projekt obejmuje następujące funkcjonalności:
-- Interfejs użytkownika do zarządzania plikami audio.
-- Odtwarzanie plików audio w formatach MP3, WAV, FLAC.
-- Kontrolowanie głośności, pauzowanie, przewijanie oraz odtwarzanie w kolejce.
-- Dodawanie folderów do biblioteki aplikacji.
-- Podgląd szczególowych informacji o pliku, takich jak nazwa pliku, rozszerzenie, rozmiar oraz czas trwania pliku audio.
+The project includes the following functionalities:
 
-## 2. Założenia
+* A user interface for managing audio files.
+* Playback of audio files in MP3, WAV, FLAC formats.
+* Volume control, pausing, seeking, and queue playback.
+* Adding folders to the application’s library.
+* Viewing detailed file information such as name, extension, size, and duration.
 
-### 2.1 Funkcjonalne
+## 2. Assumptions
 
-- **Zarządzanie biblioteką plików**: użytkownik może przeglądać i dodawać foldery z plikami audio do biblioteki.
-- **Odtwarzanie plików audio**: Aplikacja umożliwia odtwarzanie plików audio.
-- **Kontrola odtwarzania**: Aplikacja oferuje przyciski do pauzowania, wznowienia, przewijania (do przodu i do tyłu) oraz regulacji głośności.
-- **Kolejka odtwarzania**: użytkownik może włączyć opcję zapętlania pojedynczego pliku lub całej kolejki odtwarzania. Istnieje także opcja losowego odtwarzania oraz automatycznego odtwarzania kolejnego utworu z kolejki.
-- **Informacje o plikach**: Aplikacja umożliwia podgląd szczegółowych informacji o pliku.
+### 2.1 Functional
 
-### 2.2 Niefunkcjonalne
+* **Library management**: Users can browse and add folders with audio files to the library.
+* **Audio playback**: The application allows playing audio files.
+* **Playback control**: The application offers buttons for pause, resume, forward/backward seeking, and volume adjustment.
+* **Playback queue**: Users can enable looping for a single file or the entire queue. There is also a shuffle option and automatic playback of the next file in the queue.
+* **File information**: The application enables viewing detailed information about each file.
 
-- **Obsługa formatów audio**: Aplikacja odtwarza pliki audio w formatach MP3, WAV oraz FLAC.
-- **Intuicyjny interfejs użytkownika**: Aplikacja powinna być prosta w obsłudze.
+### 2.2 Non-functional
 
-## 3. Wymagania
+* **Audio format support**: The application plays audio files in MP3, WAV, and FLAC formats.
+* **Intuitive user interface**: The application should be easy to use.
 
-### 3.1 Wymagania sprzętowe
+## 3. Requirements
 
-- **System operacyjny**: Windows 11.
-- **Wolne miejsce na dysku**: 100MB.
-- **Dźwięk**: karta dźwiękowa obsługująca standardowe formaty audio.
+### 3.1 Hardware Requirements
 
-### 3.2 Wymagania programowe
+* **Operating system**: Windows 11.
+* **Free disk space**: 100MB.
+* **Sound**: A sound card supporting standard audio formats.
 
-- **Biblioteka Qt**: Qt 5.15 lub Qt 6 (w zależności od wersji).
-- **Kompilator C++**: kompilator obsługujący C++11 lub nowszy.
+### 3.2 Software Requirements
 
-## 4. Opis klas i funkcjonalności
+* **Qt Library**: Qt 5.15 or Qt 6 (depending on the version).
+* **C++ Compiler**: A compiler supporting C++11 or newer.
 
-### 4.1 Diagram klas UML
+## 4. Class Descriptions and Functionalities
 
-![Struktura klas](DiagramKlas.png)
+### 4.1 UML Class Diagram
 
-### 4.2 Opis klas
+![Class Structure](DiagramKlas.png)
 
-- **`FileManager`**: klasa odpowiedzialna za zarządzanie plikami. Odpowiada za dodawanie, usuwanie oraz zapis i odczyt ścieżek plików audio.
-- **`Player`**: Klasa odpowiedzialna za odtwarzanie plików audio. Korzysta z  `QMediaPlayer` i `QAudioOutput` do odtwarzania dźwięku.
-- **`PlayerQueve`**: klasa obsługująca kolejkę odtwarzania plików audio.
-- **`FileManagerWindow`**: okno dialogowe do zarządzania folderami plików.
+### 4.2 Class Descriptions
 
-## 5. Interfejs użytkownika
+* **`FileManager`**: Responsible for file management. Handles adding, removing, saving, and loading audio file paths.
+* **`Player`**: Responsible for audio playback. Uses `QMediaPlayer` and `QAudioOutput` for audio output.
+* **`PlayerQueve`**: Manages the playback queue of audio files.
+* **`FileManagerWindow`**: A dialog window for managing file folders.
 
-![Struktura klas](OdtwarzaczPlikowAudioZrzutEkranu.png)
-![Struktura klas](OdtwarzaczPlikowAudioZrzutEkranu2.png)
+## 5. User Interface
+
+![Class Structure](OdtwarzaczPlikowAudioZrzutEkranu.png)
+![Class Structure](OdtwarzaczPlikowAudioZrzutEkranu2.png)
+
